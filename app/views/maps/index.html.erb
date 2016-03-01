@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCulTzFdrtSmpW2xZLQjUmF426N3Ayyul4&callback=initMap"
+            async defer></script>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100%;
+        }
+    </style>
+  
+</head>
+<body>
+    <br />
+    <br />
+    <div style="margin-left:100px">
+    <div><select id="drop" onchange="change()" >
+    <option value="0">O Connel Street</option>
+    <option value="1">RathMines</option>
+    <option value="2">Drumcondra</option>
+
+</select>
+   
+
+
+    </div>
+    <br />
+    <div>Have a look below</div>
+    <br />
+    <h1 id="abc">Stores Locations</h1>
+    <div id="map" style="height:600px;width:800px"></div>
+    
+
+    </div>
+</body>
+</html>

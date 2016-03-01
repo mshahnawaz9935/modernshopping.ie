@@ -1,4 +1,7 @@
-
+<style>
+#abc{
+color: #ffffff;background-color: #4fbfa8;border-color: #41b39c;}
+</style>
 <% if @cart.empty? %>
 <% end %>
 <% total = 0 %>
@@ -63,8 +66,7 @@
                                 </div>
                                 <div class="pull-right">
                                     <button class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</button>
-                                    <button type="submit" class="btn btn-primary">Proceed to checkout <i class="fa fa-chevron-right"></i>
-                                    </button>
+									<a href="/checkout" class="btn btn-primary" style="color:white;"><i class="fa fa-chevron-left"></i> Proceed to checkout</a>
                                 </div>
                             </div>
 

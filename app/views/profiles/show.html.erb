@@ -1,0 +1,28 @@
+<div style="margin-left:30px;"><p id="notice"><%= notice %></p>
+<br>
+<h2>Profile Details</h2>
+<p>
+  <strong>Firstname:</strong>
+  <%= @profile.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @profile.lastname %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @profile.address %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @profile.mobile %>
+</p>
+
+
+<%= link_to 'Edit your profile', edit_profile_path(@profile) %> 
+<br/>
+<br>
+</div>

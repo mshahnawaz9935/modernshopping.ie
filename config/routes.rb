@@ -1,15 +1,31 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  resources :profiles
+  get '/myprofile' => 'profiles#myprofile'
+
+  get 'orderitems/show'
+
+  get 'orderitems/new'
+
+  get 'orderitems/edit'
+  devise_for :users do
+  resources :orders
+  end
   get '/home'=> 'home#index'
   get '/cart' => 'cart1#index'
-get '/cart/clear' => 'cart1#clearCart'
-get '/cart/:id' => 'cart1#add'
-get '/items/Phones' => 'items#phone'
-get '/items/Shoes' => 'items#shoes'
-get '/cart/remove/:id' => 'cart1#remove'
-root 'home#index'
+  get '/cart/clear' => 'cart1#clearCart'
+  get '/cart/:id' => 'cart1#add'
+  get '/items/Phones' => 'items#phone'
+  get '/items/Shoes' => 'items#shoes'
+  get '/cart/remove/:id' => 'cart1#remove'
+  root 'home#index'
+  get '/map' => 'maps#index'
   resources :items
+  resources :orders do
+  resources :orderitems
+  end
+  
+  get '/checkout' => 'cart1#createOrder'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1137,6 +1137,9 @@ h1 {
     margin-left: 0;
   }
 }
+#abc a:hover{
+  color: purple;
+}
 .navbar-brand {
   float: left;
   padding: 10px 15px;

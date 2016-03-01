@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 before_filter :authenticate_user!
-before_filter :ensure_admin, :only => [:new, :create, :edit, :destroy]
+
 before_action :set_item, only: [:show, :edit, :update, :destroy]  
   # GET /items
   # GET /items.json
